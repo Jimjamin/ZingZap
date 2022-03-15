@@ -4,7 +4,7 @@
   "description": "",
   "main": "linnel.js",
   "scripts": {
-    "start": "node linnel.js"
+    "start": "node zingzap.js"
   },
   "keywords": [],
   "author": "",
