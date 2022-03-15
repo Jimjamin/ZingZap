@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ZingZap</title>
+        <link rel="stylesheet" href="./src/style.css">
+        <link rel="stylesheet" href="./src/animate.css">
+        <link rel="shortcut icon" type="image/png" href="./img/zingzap.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="description" content="Through cryptocurrency, join the future of finance.">
+    </head>
+    <body>
+        <!-- KEEP THIS CODE HERE -->
+        <div id="preLoader">
+            <img src="./img/zingzap.png" id="preLoaderLogo">
+            <div id="loaderContainer">
+                <span id="loaderBar"></span>
+            </div>
+        </div>
+        <!-- -->
+
+        <!-- INSERT YOUR CODE HERE -->
+        <div id="app">
+            <img id="logo" src="./img/zingzap.png" alt="ZingZap logo">
+            <div id="intro">
+                <h2 class="title">Welcome</h2>
+                <p>Find a new way to pay <span id="whoPay"></span>. No ID, no delays, no tricks.</p>
+                <p>Cryptocurrency like you have never used before (not even a quantum computer can break it). Learn how it all works in less time then it takes to brew your tea.</p>
+                <button id="docsBtn">Read documentation</button>
+                <p>If you are ready to join the future of finance, registration is as easy as a click of a button. Beats waiting down at the bank for hours.</p>
+                <button id="regBtn">Register &nbsp; &rarr;</button>
+                <a id="logLnk">I already have an account</a>
+            </div>
+            <div id="registration">
+                <h2 class="title">Register</h2>
+                <p>Please wait while you are registered... <span id="regStatus"></span></p>
+                <span id="regAddress"></span>
+                <div id="postReg">
+                    <p>People can use this eight digit address above to pay you, pretty neat huh? Your password can be copied using the button below.</p>
+                    <button id="copyPassword"><span id="copyTxt">Copied</span><i id="copyImg" class="fa fa-clone"></i></button>
+                    <p>Forgetting your password will prevent you from accessing your account, store it somewhere safe like a password manager.</p>
+                    <button id="backBtn">&larr; &nbsp; Back</button>
+                    <button id="logBtn">ZingZap &nbsp; &rarr;</button>
+                </div>
+            </div>
+            <div id="logon">
+                <h2 class="title">Logon</h2>
+                <p>Type in your password below to logon and join the future of finance.</p>
+                <input id="passwordInput" type="password" placeholder="Password...">
+                <a id="forgotLnk">I have forgotten my password</a>
+                <span id="logonAttempt"></span>
+                <p>Paying <span id="whoPayTwo"></span> has never been as easy.</p>
+                <button id="backBtnTwo">&larr; &nbsp; Back</button>
+                <button id="logBtnTwo">ZingZap &nbsp; &rarr;</button>
+            </div>
+            <div id="payment">
+                <h2 class="title">Home</h2>
+                <p>You are logged in as <span id="logAddress"></span>. To view your account details, click on your address in bold.</p>
+                <p>Type in an eight digit address and specify an amount below to make a payment.</p>
+                <input id="toInput" placeholder="Address..." maxlength="8">
+                <input id="payInput" placeholder="Amount...">
+                <a id="payLnk">I have insufficient funds</a>
+                <button id="payBtn">Pay &nbsp; &rarr;</button>
+                <p>Hit "Pay" and before you can even blink your payment will arrive.</p>
+            </div>
+        </div>
+        <!-- -->
+
+        <noscript>Without JavaScript this application cannot be operated.</noscript>
+        <script src="./src/index.js" defer></script>
+        <script src="./src/animate.js" defer></script>
+    </body>
+</html>

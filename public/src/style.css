@@ -1,0 +1,105 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#app {
+    background-color: white;
+    padding: 2em;
+    width: calc(40% - 2em);
+    min-width: 320px;
+    margin: 1.5em auto 1.5em auto;
+    border: 2px solid black;
+}
+
+#intro {
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+}
+
+button, input {
+    width: 60%;
+    height: 64px;
+    border: 1px solid black;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+#backBtn, #backBtnTwo, #toInput, #payLnk {
+    margin-bottom: 1em;
+}
+
+#logAddress {
+    font-weight: bold;
+}
+
+#logAddress:hover {
+    cursor: pointer;
+}
+
+#logonAttempt {
+    color: orangered;
+    font-size: 16px;
+    width: 60%;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+button:hover, a:hover, #logo:hover {
+    cursor: pointer;
+}
+
+#registration, #logon, #payment {
+    display: none;
+}
+
+.title {
+    text-align: center;
+}
+
+#regAddress {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+}
+
+#copyTxt {
+    display: none;
+}
+
+#postReg {
+    display: none;
+}
+
+a {
+    text-decoration: underline;
+    color: blue;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "linnel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "linnel.js",
+  "scripts": {
+    "start": "node linnel.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^11.0.0",
+    "express": "^4.17.2",
+    "path": "^0.12.7"
+  }
+}
