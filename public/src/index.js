@@ -71,6 +71,11 @@ const logon = (callback, hashword = '') => {
 		})
 }
 
+document.getElementById("docsBtn").addEventListener("click", () => {
+	document.getElementById("intro").style.display = 'none';
+	document.getElementById("documentation").style.display = 'block';
+})
+
 document.getElementById("regBtn").addEventListener("click", () => {
 	document.getElementById("intro").style.display = 'none';
 	document.getElementById("registration").style.display = 'block';
@@ -117,30 +122,31 @@ document.getElementById("logLnk").addEventListener("click", () => {
 })
 
 document.getElementById("payBtn").addEventListener("click", () => {
-	send(document.getElementById("toInput").value, document.getElementById("payInput").value);
+	// send(document.getElementById("toInput").value, document.getElementById("payInput").value);
+	document.getElementById("payInput").click();
 })
 
-const send = (to, data) => {
-	numTX++;
-	fetch(`${window.location.href}register`)
-		.then(res => res.json())
-		.then(async res => {
-			let hashing = password;
-			for (let i = 0; i < (res.maxTX - numTX); i++) {
-				hashing = new Uint8Array(await window.crypto.subtle.digest('SHA-256', (new TextEncoder).encode(`${hashing}`)));
-				let output = '';
-				for (let j = 0; j < hashing.byteLength; j++) {
-					output += String.fromCharCode(hashing[j]);
-				}
-				hashing = window.btoa(output).toUpperCase();
-			}
-			fetch(`${window.location.href}send?to=${encodeURIComponent(to)}&data=${encodeURIComponent(data)}&hashing=${encodeURIComponent(hashing)}&address=${encodeURIComponent(address)}`)
-			if (numTX === res.maxTX - 1) {
-				return { status: 'warning', data: 'You have reached your transaction limit for this account. All future transactions will fail unless directed to the host.' };
-			}
-			return { status: 'success', data: 'You have successfully sent data to the intended recipient.' };
-		})
-		.catch(err => {
-			return { status: 'error', data: err };
-		})
-}
+// const send = (to, data) => {
+// 	numTX++;
+// 	fetch(`${window.location.href}register`)
+// 		.then(res => res.json())
+// 		.then(async res => {
+// 			let hashing = password;
+// 			for (let i = 0; i < (res.maxTX - numTX); i++) {
+// 				hashing = new Uint8Array(await window.crypto.subtle.digest('SHA-256', (new TextEncoder).encode(`${hashing}`)));
+// 				let output = '';
+// 				for (let j = 0; j < hashing.byteLength; j++) {
+// 					output += String.fromCharCode(hashing[j]);
+// 				}
+// 				hashing = window.btoa(output).toUpperCase();
+// 			}
+// 			fetch(`${window.location.href}send?to=${encodeURIComponent(to)}&data=${encodeURIComponent(data)}&hashing=${encodeURIComponent(hashing)}&address=${encodeURIComponent(address)}`)
+// 			if (numTX === res.maxTX - 1) {
+// 				return { status: 'warning', data: 'You have reached your transaction limit for this account. All future transactions will fail unless directed to the host.' };
+// 			}
+// 			return { status: 'success', data: 'You have successfully sent data to the intended recipient.' };
+// 		})
+// 		.catch(err => {
+// 			return { status: 'error', data: err };
+// 		})
+// }

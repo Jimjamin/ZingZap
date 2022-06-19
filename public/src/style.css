@@ -41,15 +41,15 @@ button, input {
     text-align: center;
 }
 
-#backBtn, #backBtnTwo, #toInput, #payLnk {
+#backBtn, #backBtnTwo, #backBtnThree, #backBtnFour, #toInput, #viewBtn, .blockBtn {
     margin-bottom: 1em;
 }
 
-#logAddress {
+#logAddress, #logAddressTwo {
     font-weight: bold;
 }
 
-#logAddress:hover {
+#logAddress:hover, #logAddressTwo:hover {
     cursor: pointer;
 }
 
@@ -66,12 +66,31 @@ button:hover, a:hover, #logo:hover {
     cursor: pointer;
 }
 
-#registration, #logon, #payment {
+#documentation, #registration, #logon, #payment, #search {
     display: none;
 }
 
 .title {
     text-align: center;
+}
+
+#cryptography, #cryptonomics {
+    display: none;
+}
+
+.docImg {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+.fig {
+    text-align: center;
+    color: rgb(56, 56, 56);
+    width: 80%;
+    font-size: 16px;
+    display: block;
+    margin: auto;
 }
 
 #regAddress {
@@ -102,4 +121,8 @@ input:focus {
 
 input:focus::placeholder {
     color: transparent;
+}
+
+#payInput {
+    display: none;
 }

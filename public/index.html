@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <meta name="description" content="Through cryptocurrency, join the future of finance.">
+        <meta name="description" content="Through blockchain technology, join the future of the cloud.">
     </head>
     <body>
         <!-- KEEP THIS CODE HERE -->
@@ -28,44 +28,100 @@
             <img id="logo" src="./img/zingzap.png" alt="ZingZap logo">
             <div id="intro">
                 <h2 class="title">Welcome</h2>
-                <p>Find a new way to pay <span id="whoPay"></span>. No ID, no delays, no tricks.</p>
-                <p>Cryptocurrency like you have never used before (not even a quantum computer can break it). Learn how it all works in less time then it takes to brew your tea.</p>
-                <button id="docsBtn">Read documentation</button>
-                <p>If you are ready to join the future of finance, registration is as easy as a click of a button. Beats waiting down at the bank for hours.</p>
+                <p>Find a new way to store <span id="whoPay"></span>. No ID, no delays, no tricks.</p>
+                <p>Blockchain technology like you have never used before (not even a quantum computer can break it). Learn how it all works in less time then it takes to brew your tea.</p>
+                <button id="docsBtn">Documentation &nbsp; <i class="fa fa-book"></i></button>
+                <p>If you are ready to join the future of the cloud, registration is as easy as a click of a button. No one but you will have the password to access your data anytime.</p>
                 <button id="regBtn">Register &nbsp; &rarr;</button>
                 <a id="logLnk">I already have an account</a>
+            </div>
+            <div id="documentation">
+                <h2 class="title">Documentation</h2>
+                <div id="vision">
+                    <h3 class="title">Vision</h3>
+                    <p>As the importance of data and the cloud continues to grow by the day, it is only natural that innovations in
+                        data-storage should be sought. Combining the concept of the cloud with blockchain technology it is possible to
+                        create an endless platform for the permanent storage of data.</p>
+                    <img class="docImg" src="./img/vision.png">
+                    <span class="fig">Electrical system symbol for a battery; storage devices with potentialliy limitless potential.</span>
+                    <p>It is this combination, brought about in a manner that remains secure under any cryptographic or cryptonomic
+                        assumptions, that can allow for the existence of data beyond the centralised control of any single entity.</p>
+                </div>
+                <div id="cryptography">
+                    <h3 class="title">Cryptographic</h3>
+                    <p>ZingZap is completely decentralised. While this site serves as a UI to access the blockchain, all the work is done by
+                        your computer. Choosing any random 256-bit string as your password, your computer will hash this string 16384 times
+                        to produce a new
+                        address. This address can be used to verify your identity and validate any signatures you publish.</p>
+                    <p>If you want to upload data to the chain in the form of a transaction you will send through the
+                        16383-<b>i</b><sup>th</sup> hash of your password as a signature, where <b>i</b> is the number of transactions you
+                        have sent before. No one except the owner of the password can achieve this (not even us), but others are able to use this
+                        signature to verify it was truly you that sent it.</p>
+                    <img class="docImg" src="./img/cryptographic.JPG">
+                    <span class="fig">Hashing involves taking some input and producing an output that cannot be replicated by anyone except the owner of the input.</span>
+                    <p>By creating signatures in this manner data can be uploaded significantly faster than with traditional methods, and
+                        the data remains secure even when quantum computers come about. However, once you have sent 16383 transactions your
+                        account becomes 'expired' and a new one must be created. This won't have too much impact though, as all data ever
+                        uploaded (even by 'expired' account) remains in permanent storage for all to access.</p>
+                    <p>As long as there exists one computer in the world running the ZingZap blockchain, all data contained within it will
+                        remain in existence in a manner that can never be censored, removed, or changed. If you are uploading private data
+                        it is important that you encrypt it prior to uploading.</p>
+                </div>
+                <div id="cryptonomics">
+                    <h3 class="title">Cryptonomics</h3>
+                    <p>Existing as the settlement layer for the blockchain ecosystem, ZingZap serves as a single point of truth for any to rely on.</p>
+                    <p>To guarantee that no one can manipulate the system to their favour each individual is provided a fraction of the total governance tokens and a fixed number of staking tokens upon committing funds to ZingZap.</p>
+                    <p>Governance tokens are handed out at a formulaic ratio so that no one can control the network without losing significant investment and data. Staking tokens are provided to define exactly how much data any one user can store.</p>
+                </div>
+                <button id="backBtnThree">&larr; &nbsp; Back</button>
+                <button id="nextBtn">Next &nbsp; &rarr;</button>
             </div>
             <div id="registration">
                 <h2 class="title">Register</h2>
                 <p>Please wait while you are registered... <span id="regStatus"></span></p>
                 <span id="regAddress"></span>
                 <div id="postReg">
-                    <p>People can use this eight digit address above to pay you, pretty neat huh? Your password can be copied using the button below.</p>
+                    <p>You can use this eight digit address above to track all your stored data, pretty neat huh? Your password can be copied using the button below.</p>
                     <button id="copyPassword"><span id="copyTxt">Copied</span><i id="copyImg" class="fa fa-clone"></i></button>
-                    <p>Forgetting your password will prevent you from accessing your account, store it somewhere safe like a password manager.</p>
+                    <p>Forgetting your password will prevent you from storing new data using your account, store it somewhere safe like a password manager.</p>
+                    <p>If you forget and didn't have your password stored somewhere safe though, you will still be able to access existing stored data.</p>
                     <button id="backBtn">&larr; &nbsp; Back</button>
                     <button id="logBtn">ZingZap &nbsp; &rarr;</button>
                 </div>
             </div>
             <div id="logon">
                 <h2 class="title">Logon</h2>
-                <p>Type in your password below to logon and join the future of finance.</p>
+                <p>Type in your password below to logon and join the future of the cloud.</p>
                 <input id="passwordInput" type="password" placeholder="Password...">
                 <a id="forgotLnk">I have forgotten my password</a>
                 <span id="logonAttempt"></span>
-                <p>Paying <span id="whoPayTwo"></span> has never been as easy.</p>
+                <p>Storing <span id="whoPayTwo"></span> have never been as easy.</p>
                 <button id="backBtnTwo">&larr; &nbsp; Back</button>
                 <button id="logBtnTwo">ZingZap &nbsp; &rarr;</button>
             </div>
             <div id="payment">
                 <h2 class="title">Home</h2>
                 <p>You are logged in as <span id="logAddress"></span>. To view your account details, click on your address in bold.</p>
-                <p>Type in an eight digit address and specify an amount below to make a payment.</p>
-                <input id="toInput" placeholder="Address..." maxlength="8">
-                <input id="payInput" placeholder="Amount...">
-                <a id="payLnk">I have insufficient funds</a>
-                <button id="payBtn">Pay &nbsp; &rarr;</button>
-                <p>Hit "Pay" and before you can even blink your payment will arrive.</p>
+                <p>Click "View" to search through the blockchain for stored data. Hit "Send" and before you can even blink your data will arrive on ZingZap for permanent storage.</p>
+                <button id="viewBtn">View &nbsp; <i class="fa fa-search"></i></button>
+                <input type="file" id="payInput">
+                <button id="payBtn">Send &nbsp; <i class="fa fa-upload"></i></button>
+                <p>It may take more than a minute to be able to view recently stored data. No file greater than 4MB in size can be stored.</p>
+            </div>
+            <div id="search">
+                <h2 class="title">View</h2>
+                <p>You are logged in as <span id="logAddressTwo"></span>. To view your account details, click on your address in bold.
+                </p>
+                <input id="searchInput" type="text" placeholder="Search...">
+                <p>Use the above search field to search for existing data by address, block number, or transaction number. Otherwise use the below buttons to have a closer view at the data stored in each block.</p>
+                <button class="blockBtn"></button>
+                <button class="blockBtn"></button>
+                <button class="blockBtn"></button>
+                <button class="blockBtn"></button>
+                <button class="blockBtn"></button>
+                <p>Loading data may take more than a minute if the data in question has not been accessed for a while.</p>
+                <button id="backBtnFour">&larr; &nbsp; Back</button>
+                <button id="nextBtnTwo">Next &nbsp; &rarr;</button>
             </div>
         </div>
         <!-- -->
